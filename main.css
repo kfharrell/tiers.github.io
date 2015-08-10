@@ -1,89 +1,130 @@
-body {
+body
+{
 	background-color: #ccc;
 	margin: 0 auto;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	font-family: Roboto, sans-serif;
 }
-#top-bar {
+#top-bar
+{
 	width: 100%;
 	height: 50px;
 	background-color: #555;
-	text-transform: uppercase;
-}
-#top-bar img {
-	width: auto;
-	height: 50px;
-	float: left;
 
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    display:box;
+    box-pack:center;
+    box-align:center;
 }
-#top-bar input[type="text"] {
-	width: 40%;
-	margin-left: 1%;
-	font-family: Roboto, sans-serif;
+
+#top-bar .stretch
+{
+	width: 90%;
+	white-space: nowrap;
+}
+@media all and (min-width: 1200px)
+{
+	#top-bar .stretch
+	{
+		width: 1200px;
+	}
+}
+
+#top-bar input[type="text"]
+{
+	width: calc(100% - 24px);
+	height: 50px;
+	margin: auto;
+	padding: 0;
 	color: #fff;
-	line-height: 48px;
-	text-indent: 45px;
+	line-height: 50px;
+	text-indent: 15px;
 	font-size: 25px;
 	background-color: #555;
 	border: 0;
 	-webkit-appearance:none ;
 	outline: none;
-	font-weight: bold;
 	
 }
-#top-bar input[type="text"]:focus {
-	width: 40%;
-	font-family:  Roboto, sans-serif;
-	color: #fff;
-	line-height: 48px;
-	text-indent: 45px;
-	font-size: 25px;
-	background-color: #000;
-	border: 0;
-	-webkit-appearance:none ;
-	outline: none;
-	
+#top-bar input[type="text"]:focus
+{
+	background-color: #111;
 }
-#tiers {
-	float: left;
-      position: relative;
-      left: 17.5%;
-	margin-top: 1%;
-	width: 70%;
+
+#top-bar i
+{
+	position: relative;
+}
+
+.button
+{
+	cursor: pointer;
+}
+
+.box
+{
+	margin-bottom: 12px;
+	margin-top: 12px;
 	background-color: #fff;
-	border: 3px solid #A6A6A6;
+	box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	overflow: auto; 
+}
+
+#tiers
+{
+	float: none;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media all and (min-width: 1200px)
+{
+	#tiers
+	{
+		float: left;
+		width: 750px;
+	}
 }
 #ind-tier {
-	width: 5%;
+	width: 50px;
 	height: 50px;
-	margin: 1%;
+	margin: 8px;
 	border-radius: 2px;
 	float: left;
-	font-family: Orbitron, Roboto, sans-serif;
 	font-weight: bold;
 	color: #555;
 	line-height: 50px;
 	text-align: center;
 	font-size: 28px;
 	border: 1px solid #ccc;
-
+	clear: left;
+	cursor: default;
 }
 .ind-list {
-	width: 90%;
+	width: calc(100% - 88px);
 	height: 100%;
 	min-height: 50px;
 	float: left;
-	margin: 1%;
+	margin: 8px;
 	border: 1px solid #ccc;
-
-	
-
 }
-.ind-list img { width: 50px; height: 50px; position: relative; float: left; }
+.ind-list img
+{ width: 50px; height: 50px; position: relative; float: left; }
 #ind-text {
 	width: 50%;
 	float: right;
 	margin-right: 1%;
 	margin-top: 5px;
-	font-family: Roboto, sans-serif;
 	color: #000;
 	text-align: center;
 	font-size: 12px;
@@ -157,66 +198,119 @@ body {
 	background: linear-gradient(to bottom,  rgba(255,218,214,1) 0%,rgba(255,195,188,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffdad6', endColorstr='#ffc3bc',GradientType=0 ); /* IE6-9 */
 }
-
-#god-list {
-	float: left;
-	width: 29%;
-	min-height: 100px;
-	border: 3px solid #A6A6A6;
-	background-color: #fff;
-	margin-left: 1%;
-	margin-top: 1%;
+.tnew
+{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ebffd7+0,deffbd+100 */
+	background: #ebffd7; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ebffd7 0%, #deffbd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebffd7), color-stop(100%,#deffbd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ebffd7 0%,#deffbd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ebffd7 0%,#deffbd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ebffd7 0%,#deffbd 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ebffd7 0%,#deffbd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebffd7', endColorstr='#deffbd',GradientType=0 ); /* IE6-9 */
 }
-#god-list img {
+.wrap
+{
+	width: 100%;
+	height: 100%;
+	margin: auto;
+}
+@media all and (min-width: 1200px)
+{
+	.wrap
+	{
+		width: 1200px;
+		height: 100%;
+		margin: auto;
+	}
+}
+.column
+{
+	float: none;
+	width: 90%;
+	min-height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media all and (min-width: 1200px)
+{
+	.column
+	{
+		float: right;
+		width: 378px;
+	}
+}
+#god-list
+{
+	height: auto;
+}
+@media all and (min-width: 1200px)
+{
+	#god-list
+	{
+		width: 378px;
+	}
+}
+#god-list img
+{
 	width: 50px;
 	height: 50px;
-	margin: 1%;
+	margin: 2px;
 	float: left;
 }
-#bottom-rightd {
-	float: left;
-	width: 27%;
-	margin-left: 1%;
-	margin-top: 1%;
-	height: 100px;
+#bottom-rightd
+{
+	margin: 8px;
 	text-align: center;
-		font-family: Roboto, sans-serif;
-	font-size: 18px;
-	color: #000;
 }
-#bottom-rightd button, input[type="button"] {
-	width: 20%;
-	background-color: #ccc;
-	border-radius: 5px;
+#bottom-rightd button, input[type="button"]
+{
+	width: 80px;
+	background-color: #aaa;
+	border-radius: 4px;
 	border: 0;
-	font-family: Roboto, sans-serif;
 	font-size: 18px;
 	color: #fff;
-	height: 50px;
-	margin-top: 25px;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+100;Black+3D */
-	background: rgb(125,126,125); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */	
 	cursor: pointer;
 }
-::-webkit-input-placeholder {
-   color: #fff;
+#bottom-rightd button, input[type="button"]:active
+{
+	background-color: #444;
+}
+#bottom-rightd button, input[type="button"]:hover
+{
 }
 
-:-moz-placeholder { /* Firefox 18- */
-   color: #fff;  
+.search
+{
+	text-align: center;
+}
+#search
+{
+	width: 60%;
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
-   color: #fff;  
+.footer
+{
+	clear: both;
+	text-align: center;
+	color: #fff;
 }
 
-:-ms-input-placeholder {  
-   color: #fff;  
+a
+{
+	color: #fff;
+}
+a:hover
+{
+	color: #fff;
+}
+a:active
+{
+	color: #fff;
+}
+.god
+{
+	transition: opacity 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s;
 }
